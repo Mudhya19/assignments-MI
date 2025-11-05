@@ -1,0 +1,33 @@
+import pandas as pd
+from diagnostic_analysis import DiagnosticAnalyzer
+
+def test_csv_loading():
+    """Test function to verify CSV loading functionality"""
+    analyzer = DiagnosticAnalyzer()
+    
+    # Test loading the CSV file
+    start_date = "2023-01"
+    end_date = "2025-12-31"
+    
+    print("Testing CSV loading functionality...")
+    df = analyzer.load_bpjs_antrol_csv(start_date, end_date)
+    
+    if df is not None and not df.empty:
+        print(f"✓ Successfully loaded {len(df)} rows from CSV")
+        print(f"Columns in the loaded data: {list(df.columns)}")
+        print(f"First few rows:")
+        print(df.head())
+        
+        # Perform a basic analysis
+        stats = analyzer.analyze_registration_failures(df)
+        print(f"\nAnalysis Results:")
+        print(f"Total registrations: {stats['total_registrations']}")
+        print(f"Successful registrations: {stats['successful_registrations']}")
+        print(f"Failed registrations: {stats['failed_registrations']}")
+        print(f"Success rate: {stats['success_rate']:.2f}%")
+        print(f"Failure rate: {stats['failure_rate']:.2f}%")
+    else:
+        print("✗ Failed to load CSV data")
+        
+if __name__ == "__main__":
+    test_csv_loading()

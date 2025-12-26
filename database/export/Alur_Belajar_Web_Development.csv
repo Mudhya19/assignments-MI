@@ -1,0 +1,21 @@
+ID,Title,Parent ID
+1,Dasar-dasar Web Development,
+2,HTML (Struktur halaman),1
+3,CSS (Styling dan Layout),1
+4,JavaScript (Dasar-dasar scripting),1
+5,Front-End Development,
+6,"CSS Frameworks (Bootstrap, Tailwind CSS)",5
+7,"JavaScript Frameworks (React, Vue, Angular)",5
+8,Responsive Design,5
+9,Back-End Development,
+10,"Dasar-dasar Server (HTTP, REST API)",9
+11,"Backend Frameworks (Node.js, Express, Django, Laravel)",9
+12,"Database (MySQL, PostgreSQL, MongoDB)",9
+13,Full-Stack Development,
+14,Authentication & Authorization,13
+15,"Deployment (Vercel, Netlify, Heroku)",13
+16,CI/CD & DevOps,13
+17,Project & Best Practices,
+18,Membangun Portofolio,17
+19,Git & Version Control,17
+20,Clean Code & Security,17
